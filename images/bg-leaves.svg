@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .l { fill: none; stroke: #8a7a6a; stroke-width: 0.6; stroke-linecap: round; stroke-linejoin: round; opacity: 0.22; }
+    </style>
+  </defs>
+  <!-- lekki, powtarzalny wzór liści / gałązek -->
+  <g class="l" transform="translate(20 30)">
+    <path d="M0 40 Q 15 0 40 5 Q 25 25 0 40" />
+    <path d="M5 45 Q 30 25 50 8" />
+  </g>
+  <g class="l" transform="translate(120 80) rotate(25)">
+    <path d="M0 35 Q 12 0 32 2 Q 18 20 0 35" />
+    <path d="M4 38 Q 25 20 45 4" />
+  </g>
+  <g class="l" transform="translate(300 20) rotate(-12)">
+    <path d="M0 38 Q 16 0 38 4 Q 22 24 0 38" />
+  </g>
+  <g class="l" transform="translate(60 200) rotate(8)">
+    <path d="M0 0 Q 8 20 0 40 Q -8 20 0 0" />
+    <path d="M-5 8 Q 12 8 5 25" />
+  </g>
+  <g class="l" transform="translate(200 150) rotate(-35)">
+    <path d="M0 32 Q 14 0 34 3 Q 20 18 0 32" />
+    <path d="M3 36 Q 24 15 40 0" />
+  </g>
+  <g class="l" transform="translate(320 200)">
+    <path d="M0 0 Q 10 18 0 36 Q -10 18 0 0" />
+  </g>
+  <g class="l" transform="translate(40 300) rotate(15)">
+    <path d="M0 36 Q 15 0 36 5 Q 22 22 0 36" />
+  </g>
+  <g class="l" transform="translate(180 320) rotate(-8)">
+    <path d="M0 30 Q 10 0 30 0 Q 15 18 0 30" />
+  </g>
+  <g class="l" transform="translate(280 340) rotate(40)">
+    <path d="M0 0 Q 6 14 0 28 Q -6 14 0 0" />
+  </g>
+  <g class="l" transform="translate(350 90)">
+    <path d="M0 25 Q 10 0 25 0 Q 12 14 0 25" />
+  </g>
+</svg>
