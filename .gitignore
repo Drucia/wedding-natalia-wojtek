@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+*.code-workspace
+
+# Local env / secrets (jeśli kiedyś dodasz)
+.env
+.env.local
+.env.*.local
+
+# Logi i tymczasowe
+*.log
+*.tmp
+*.temp
+
+# Opcjonalnie, jeśli dojdzie build (npm/vite itd.)
+node_modules/
+dist/
+.cache/

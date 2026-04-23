@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Natalia i Wojtek – zaproszenie ślubne, 20 czerwca 2026" />
+  <title>Natalia i Wojtek — Wesele 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- GitHub Pages: w Settings włącz hosting z brancha (np. main, folder /) -->
+  <noscript>
+    <style>
+      .envelope-screen { display: none !important; }
+      body.is-envelope-active { overflow: auto !important; }
+      body.is-envelope-active .site-header,
+      body.is-envelope-active main,
+      body.is-envelope-active .site-footer { display: block !important; }
+    </style>
+  </noscript>
+</head>
+<body class="is-envelope-active">
+  <div id="envelope-screen" class="envelope-screen" role="dialog" aria-modal="true" aria-label="Koperta z zaproszeniem" aria-hidden="false">
+    <p class="envelope-screen__hint">Mamy coś dla Was…</p>
+    <div class="envelope" role="img" aria-label="Koperta z zaproszeniem">
+      <div class="envelope__body"></div>
+      <div class="envelope__pocket">
+        <span class="envelope__wax" aria-hidden="true">N<span class="envelope__wax-amp">&amp;</span>W</span>
+      </div>
+      <div class="envelope__letter">
+        <p>Serdecznie zapraszamy</p>
+        <p class="envelope__names">Natalia &amp; Wojtek</p>
+      </div>
+      <div class="envelope__flap-pivot" aria-hidden="true">
+        <div class="envelope__flap"></div>
+      </div>
+    </div>
+    <button type="button" class="envelope-screen__btn" id="envelope-open-btn">
+      Otwórz zaproszenie
+    </button>
+  </div>
+
+  <a href="#main" class="skip-link">Pomiń kopertę, przejdź do treści</a>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="#hero">Natalia <span class="amp">&amp;</span> Wojtek</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Główne">
+        <a href="#onas">Para</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#love-story">Love Story</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#lokalizacja">Lokalizacja</a>
+        <a class="site-nav__external" id="link-drive" href="https://drive.google.com" target="_blank" rel="noopener noreferrer">Galeria na Dysku</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section section--hero" id="hero" aria-label="Główne zdjęcie i data">
+      <div class="hero__bg" data-parallax-hero>
+        <div class="hero__media" style="background-image: url('images/hero.png');" aria-hidden="true"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <h1 class="hero__title">Natalia i Wojtek</h1>
+          <p class="hero__date">20 CZERWIEC 2026</p>
+          <p class="hero__cta">Zapisz sobie datę</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--intro" id="onas">
+      <div class="section__inner">
+        <h2 class="section__title">Młoda i Młody</h2>
+        <p class="section__lead">Natalia i Wojtek to para, która najlepiej udowadnia, że nawet średnia pierwsza randka może zakończyć się romantycznymi zaręczynami w Rzymie.</p>
+        <div class="heart-divider" role="separator" aria-hidden="true">
+          <span class="heart-divider__line"></span>
+          <span class="heart-divider__heart">&#9829;</span>
+          <span class="heart-divider__line"></span>
+        </div>
+        <div class="profile-grid">
+          <article class="profile-card js-reveal">
+            <div class="profile-card__img-wrap">
+              <img class="profile-card__img" src="images/profile-natalia.png" width="200" height="200" alt="Natalia" loading="lazy" />
+            </div>
+            <h3 class="profile-card__name">Natalia Nawrocka</h3>
+            <p class="profile-card__text">Natalia ma 23 lata i pracuje w firmie. Poznasz ją po tym, że jest ciepłą, kochającą i radosną osobą, która potrafi sprawić, że każdy czuje się przy niej jak w domu. Uwielbia gotować i próbować nowych smaków, a wolny czas spędza z najbliższymi – szczególnie z Wojtkiem.</p>
+          </article>
+          <article class="profile-card js-reveal">
+            <div class="profile-card__img-wrap">
+              <img class="profile-card__img" src="images/profile-wojtek.png" width="200" height="200" alt="Wojciech" loading="lazy" />
+            </div>
+            <h3 class="profile-card__name">Wojciech Draciuk</h3>
+            <p class="profile-card__text">Wojtek ma 23 lata i jest architektem, interesuje się wszystkim i niczym – czyli tym, co akurat jest na pierwszym planie. W pracy poznaje nowe technologie i oprogramowania, a po godzinach najbardziej odpoczywa przy filmach, grach lub wspólnych wyjściach z rodziną, naturą i przyjaciółmi... jest spokojny, towarzyski i pomocny – czyli idealny kandydat do roli męża i kumpla nawet najbardziej skomplikowanego planu... zaręczynowego.</p>
+          </article>
+        </div>
+        <p class="section__whisper">Gdybyście chcieli nas uhonorować drobnym gestem, najbardziej ucieszy nas skromna koperta — cicho zbieramy na budowę naszego pierwszego wspólnego domu.</p>
+        <div class="section__actions">
+          <a class="btn" href="#love-story">Poznaj naszą historię</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--scene scene--dance" id="nasz-kadr" aria-label="Wspólne kadry">
+      <div class="scene__grid">
+        <div class="scene__panel scene__panel--a js-reveal" style="background-image: url('images/dance-street.png');">
+          <p class="scene__note scene__note--a">Stąd zaczyna się nasz rytm</p>
+        </div>
+        <div class="scene__panel scene__panel--b js-reveal" style="background-image: url('images/dance-spin.png');">
+          <p class="scene__note scene__note--b">I ten jeden obrót, który zostaje na dłużej</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="section__inner">
+        <h2 class="section__title" id="gallery-heading">Uchwycone wspólne chwile</h2>
+        <p class="section__lead">Natalia i Wojtek to para, która najlepiej udowadnia, że można być jednocześnie spokojnym i kompletnie zakręconym. U nich nastrój zmienia się jak pogoda – to deszcz na romantycznym spacerze i słońce na kawie... a na koniec nocy wybiorą i tak wspólny stół, aby rozkoszować się kawą do rana.</p>
+        <div class="heart-divider" role="separator" aria-hidden="true">
+          <span class="heart-divider__line"></span>
+          <span class="heart-divider__heart">&#9829;</span>
+          <span class="heart-divider__line"></span>
+        </div>
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--tall js-reveal"><img src="images/couple-cobblestone.png" width="500" height="800" alt="Natalia i Wojtek na brukowej ulicy" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item--wide js-reveal"><img src="images/couple-water.png" width="800" height="500" alt="Para przy wodzie w złotym świetle" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item--tall js-reveal"><img src="images/story-hands.png" width="500" height="750" alt="Splecione dłonie na bruku" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item--tall js-reveal"><img src="images/scene-bridge.png" width="500" height="700" alt="Para na moście" loading="lazy" /></figure>
+          <figure class="gallery__item js-reveal"><img src="images/story-ring-detail.png" width="600" height="600" alt="Zaręczynowy pierścionek" loading="lazy" /></figure>
+          <figure class="gallery__item js-reveal"><img src="images/gallery-sylwester.png" width="700" height="500" alt="Sylwester — wspólna zabawa" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item--wide js-reveal"><img src="images/dance-street.png" width="900" height="500" alt="Taniec na brukowej ulicy" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item--tall js-reveal"><img src="images/dance-spin.png" width="500" height="850" alt="Taniec z obrotem" loading="lazy" /></figure>
+          <figure class="gallery__item js-reveal"><img src="images/hero-forest.png" width="650" height="500" alt="Para w jesiennym lesie" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--story" id="love-story" aria-labelledby="love-story-heading">
+      <div class="section__deco" aria-hidden="true"></div>
+      <div class="section__inner">
+        <h2 class="section__title" id="love-story-heading">Nasze Love Story</h2>
+        <p class="section__intro">Ich historia zaczęła się niepozornie. Natalia zauważyła Wojtka w propozycjach znajomych na Facebooku, a jego zdjęcie profilowe na tyle jej się spodobało, że postanowiła dodać go do znajomych i zaprosić do rozmowy&hellip;</p>
+
+        <div class="timeline">
+          <article class="timeline__block js-reveal">
+            <p class="timeline__date">12/11/2021</p>
+            <h3 class="timeline__subtitle">Zostaliśmy parą</h3>
+            <p class="timeline__text">Po kilku miesiącach spotkali się w kinie na premierze filmu James Bond „No Time to Die”. Pierwsza randka nie była z tych filmowych – była trochę stresująca&hellip; ale mimo to postanowili dać sobie kolejną szansę. Z każdym spotkaniem było coraz lepiej, aż w listopadzie 2021 roku oficjalnie zostali parą.</p>
+          </article>
+          <article class="timeline__block timeline__block--center js-reveal">
+            <p class="timeline__icon" aria-hidden="true">&#9825;</p>
+            <h3 class="timeline__subtitle">Pierwsze kocham</h3>
+            <p class="timeline__text">Pierwsze „Kocham Cię” padło po kilku miesiącach spotkań, na pożegnaniu przed domem rodzinnym. Od tego momentu oboje wiedzieli, że to coś wyjątkowego.</p>
+          </article>
+          <article class="timeline__block js-reveal">
+            <p class="timeline__date">19/09/2024</p>
+            <h3 class="timeline__subtitle">Powiedziała TAK!</h3>
+            <p class="timeline__text">Rzym – pierwotnie planował oświadczyć się przy fontannie di Trevi, później przy Koloseum i kilku innych miejscach, ale wszędzie było zbyt tłoczno. Dopiero późnym wieczorem, na spokojnym Placu Świętego Piotra, pojawił się ten właściwy moment. Pomimo dużej tremy, Natalia z radością odpowiedziała, gdy tylko zrozumiała, o co chodzi. Wojtek tylko się uśmiechnął – tylko on wie, ile musiał czekać, by „jedyna w swoim rodzaju” doszła do tego momentu.</p>
+          </article>
+        </div>
+
+        <div class="story-feature js-reveal">
+          <img class="story-feature__img" src="images/story-hands.png" width="1600" height="800" alt="Zaręczyny — dłonie i pierścionek" loading="lazy" />
+          <div class="story-feature__overlay">
+            <p class="story-feature__quote">Dziś Natalia i Wojtek z uśmiechem wspominają, że wszystko zaczęło się od kliknięcia „dodaj do znajomych”, a skończyło na oświadczynach w Watykanie. I wygląda na to, że to dopiero początek ich wspólnej przygody. &#9829;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rsvp" aria-labelledby="rsvp-heading">
+      <div class="section__inner section__inner--narrow">
+        <h2 class="section__title" id="rsvp-heading">Przyjedziesz?</h2>
+        <p class="section__lead">Daj znać, czy przybędziecie – przez formularz albo telefon. Bardzo zależy nam, żebyśmy mogli wszystko dobrze zaplanować.</p>
+        <p class="contact-phones">Natalia: <a href="tel:+48537188825">537 188 825</a> lub <a href="tel:+48796835240">796 835 240</a></p>
+        <p class="contact-phones">Wojtek: <a href="tel:+48730975899">730 975 899</a> lub <a href="tel:+48697525691">697 525 691</a></p>
+        <div class="heart-divider" role="separator" aria-hidden="true">
+          <span class="heart-divider__line"></span>
+          <span class="heart-divider__heart">&#9829;</span>
+          <span class="heart-divider__line"></span>
+        </div>
+        <form class="rsvp-form" id="rsvp-form" novalidate>
+          <p class="rsvp-form__note" id="rsvp-config-note" hidden>Skonfiguruj <code>config.js</code> (klucz Web3Forms), aby wysyłka działała.</p>
+          <label>
+            <span>Imię i nazwisko / para</span>
+            <input type="text" name="name" id="rsvp-name" required autocomplete="name" />
+          </label>
+          <label>
+            <span>Adres e-mail</span>
+            <input type="email" name="email" id="rsvp-email" required autocomplete="email" inputmode="email" />
+          </label>
+          <label>
+            <span>Liczba osób (w tym Ty / Wy)</span>
+            <input type="number" name="guests" id="rsvp-guests" min="1" max="20" value="1" required />
+          </label>
+          <label>
+            <span>Obecność</span>
+            <select name="attendance" id="rsvp-attendance" required>
+              <option value="" disabled selected hidden>Wybierz</option>
+              <option value="tak">Będziemy z przyjemnością</option>
+              <option value="nie">Nie damy rady</option>
+              <option value="moze">Jeszcze nie wiemy / damy znać później</option>
+            </select>
+          </label>
+          <label>
+            <span>Uwagi (np. diety, potrzeby, dzieci)</span>
+            <textarea name="message" id="rsvp-message" rows="4"></textarea>
+          </label>
+          <button type="submit" class="btn btn--full" id="rsvp-submit">Wyślij odpowiedź</button>
+          <p class="rsvp-form__status" id="rsvp-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--contact-block" id="kontakt">
+      <div class="section__inner">
+        <h2 class="section__title">Kontakt</h2>
+        <p class="section__lead">Wolisz zadzwonić? Jesteśmy do dyspozycji.</p>
+        <p class="contact-phones">Natalia: <a href="tel:+48537188825">537 188 825</a> lub <a href="tel:+48796835240">796 835 240</a></p>
+        <p class="contact-phones">Wojtek: <a href="tel:+48730975899">730 975 899</a> lub <a href="tel:+48697525691">697 525 691</a></p>
+        <p class="section__foot"><a class="link-inline" id="link-drive-2" href="https://drive.google.com" target="_blank" rel="noopener noreferrer">Galeria zdjęć na Google Dysku</a></p>
+      </div>
+    </section>
+
+    <section class="section section--location" id="lokalizacja" aria-labelledby="location-heading">
+      <div class="location-hero" data-parallax-location>
+        <div class="location-hero__media" style="background-image: url('images/couple-water.png');" aria-hidden="true"></div>
+        <div class="location-hero__overlay"></div>
+        <div class="location-hero__text">
+          <h2 class="location-hero__title" id="location-heading">Świętuj z nami</h2>
+          <p class="location-hero__date">20 CZERWCA 2026</p>
+        </div>
+        <div class="location-hero__cards">
+          <article class="place-card js-reveal">
+            <h3 class="place-card__title">Ceremonia</h3>
+            <p class="place-card__when">Sobota, 20 czerwca 2026 · 14:30</p>
+            <p class="place-card__where">Kościół pw. NMP Różańcowej, ul. Wrocławska 79, Kiełczów</p>
+            <a class="place-card__map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Ko%C5%9Bci%C3%B3%C5%82+NMP+R%C3%B3%C5%BCa%C5%84cowej+Wroc%C5%82awska+79+Kie%C5%82cz%C3%B3w">Dojazd</a>
+          </article>
+          <article class="place-card js-reveal">
+            <h3 class="place-card__title">Wesele i poprawiny</h3>
+            <p class="place-card__when">Sobota – niedziela, 20–21 czerwca 2026</p>
+            <p class="place-card__hours">Sob. 18:00 – 4:00 &nbsp;|&nbsp; Niedz. 12:00 – 18:00 (poprawiny)</p>
+            <p class="place-card__where">Sala Pałacowa, <strong>Hotel Jasek</strong>, ul. Sułowska 39, Wrocław</p>
+            <a class="place-card__map" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Jasek+Su%C5%82owska+39+Wroc%C5%82aw">Dojazd</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Natalia <span class="amp">&amp;</span> Wojtek · 20.06.2026</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/envelope.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
