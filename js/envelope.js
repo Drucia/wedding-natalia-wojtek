@@ -1,5 +1,5 @@
 /**
- * Ekran powitalny: koperta + otwarcie, zapis w localStorage, wsparcie prefer-reduced-motion
+ * Welcome screen: envelope animation, localStorage remember-opened, prefers-reduced-motion
  */
 (function () {
   "use strict";
@@ -32,7 +32,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, "1");
     } catch (e) {
-      /* prywatna przeglądarka itp. */
+      /* private mode, quota, etc. */
     }
     if (main) {
       main.setAttribute("tabindex", "-1");

@@ -10,17 +10,17 @@ Desktop.ini
 .idea/
 *.code-workspace
 
-# Local env / secrets (jeśli kiedyś dodasz)
+# Local env / secrets (if you add them later)
 .env
 .env.local
 .env.*.local
 
-# Logi i tymczasowe
+# Logs and temp files
 *.log
 *.tmp
 *.temp
 
-# Opcjonalnie, jeśli dojdzie build (npm/vite itd.)
+# Optional: if you add a build (npm/vite, etc.)
 node_modules/
 dist/
 .cache/

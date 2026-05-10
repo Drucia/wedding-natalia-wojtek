@@ -27,3 +27,9 @@ Then open `http://localhost:8000` in your browser.
 ## GitHub Pages
 
 In the GitHub repository: **Settings → Pages** — select the branch (e.g. `master` or `main`) and the root folder (`/`).
+
+The repo includes **`.nojekyll`** so GitHub does not run Jekyll; everything is served as plain static files (HTML, CSS, JS, images). That matches what GitHub Pages can host: no server-side code, no secrets on the server (anything in `config.js` is public in the browser).
+
+**Paths:** Asset links are **relative** (`css/…`, `js/…`, `images/…`), so they work both on `username.github.io` and on **project** URLs like `username.github.io/repo-name/`.
+
+**Google Drive:** The site only shows the **share link** and the **`id=`** query snippet for the folder (from `config.js`). There is no embedded Drive preview on the page.

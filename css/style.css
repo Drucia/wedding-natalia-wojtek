@@ -1,6 +1,6 @@
 /* --- Variables --- */
 :root {
-  /* Ciepłe, kremowe tło; akcenty w tonie brudnego różu / brzoskwini (delikatniej niż poprzedni miedziany) */
+  /* Warm cream base; dusty rose / peach accents (softer than a strong copper) */
   --color-bg: #fbf7f1;
   --color-bg-mute: #f3ece4;
   --color-text: #2d2a28;
@@ -51,7 +51,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--color-text);
-  /* Wzór zwykle widać tylko w rogach; warstwa kremowa dominuje, żeby tekst czytało się czyściej */
+  /* Pattern shows mostly in corners; cream wash keeps body text readable */
   background-color: var(--color-bg);
   background-image: linear-gradient(
       180deg,
@@ -184,7 +184,7 @@ a:hover {
   margin: 0 0.1rem;
 }
 
-/* Obrót na osobnym kontenerze — clip-path + rotateX na jednym elemencie psuje backface w Chrome/WebKit */
+/* Rotation on a separate wrapper: clip-path + rotateX on one element breaks backface in Chrome/WebKit */
 .envelope__flap-pivot {
   position: absolute;
   left: 0;
@@ -309,7 +309,7 @@ body:not(.is-envelope-active) main {
   display: block;
 }
 
-/* Fix: we used display none on main - but skip link goes to main - we need when envelope open only hide visually or use inert. Using hidden attribute via class on wrapper is OK - skip link "Pomiń" will call JS to close envelope */
+/* Skip link targets #main; while envelope is open main is display:none — skip triggers JS to close first */
 
 .site-header__inner {
   max-width: 1200px;
@@ -445,10 +445,6 @@ body:not(.is-envelope-active) main {
   z-index: 1;
 }
 
-.section__inner--narrow {
-  max-width: 520px;
-}
-
 .section__title {
   font-family: var(--font-script);
   font-size: clamp(2.5rem, 6vw, 3.75rem);
@@ -481,11 +477,6 @@ body:not(.is-envelope-active) main {
 .section__actions {
   text-align: center;
   margin-top: 2.5rem;
-}
-
-.section__foot {
-  text-align: center;
-  margin-top: 1rem;
 }
 
 .section__whisper {
@@ -545,7 +536,7 @@ body:not(.is-envelope-active) main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-image: inline w HTML (względem dokumentu), nie przez var() w tym pliku */
+  /* background-image set inline in HTML (document-relative), not via var() here */
   transform: translate3d(0, 0, 0);
   will-change: transform;
 }
@@ -561,7 +552,7 @@ body:not(.is-envelope-active) main {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  /* Mocniejszy lewy pas pod jasne niebo / światło w kadrze lasu */
+  /* Stronger vignette on the left for bright sky / light in the forest frame */
   background: linear-gradient(
     125deg,
     rgba(0, 0, 0, 0.58) 0%,
@@ -612,7 +603,7 @@ body:not(.is-envelope-active) main {
   opacity: 0.95;
 }
 
-/* --- Scene strip (taniec — przerywnik między sekcjami, np. przed galerią) --- */
+/* --- Scene strip (dance interlude between sections, e.g. before gallery) --- */
 .section--scene.scene--dance {
   padding: 0;
   overflow: hidden;
@@ -632,7 +623,7 @@ body:not(.is-envelope-active) main {
   background-repeat: no-repeat;
 }
 
-/* Obrót — przy cover + center ucinało górę kadru (głowy); kotwiczymy od góry zdjęcia */
+/* Anchor from top: cover + center was cropping heads */
 .scene__panel--b {
   background-position: center top;
 }
@@ -669,6 +660,8 @@ body:not(.is-envelope-active) main {
   left: 6%;
   bottom: 10%;
   transform: translateY(14px) rotate(-2.5deg);
+  white-space: nowrap;
+  max-width: min(22rem, calc(100vw - 2.5rem));
 }
 
 .scene__note--b {
@@ -897,7 +890,7 @@ body:not(.is-envelope-active) main {
   background: var(--color-bg-mute);
 }
 
-/* Subtelne wstawki: czarno-białe sprigi (PNG) z blend — biel znika, zostają cieniutkie linie */
+/* Light sprig ornaments (PNG) with multiply — white drops out, thin lines remain */
 #onas::after,
 #gallery::before {
   content: "";
@@ -1010,13 +1003,6 @@ body:not(.is-envelope-active) main {
   max-width: 26rem;
 }
 
-.timeline__block--center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 2rem;
-}
-
 /* Story feature image + quote */
 .story-feature {
   position: relative;
@@ -1057,7 +1043,72 @@ body:not(.is-envelope-active) main {
   max-width: 44rem;
 }
 
-/* --- RSVP --- */
+/* --- Google Drive (QR image, link, query snippet) --- */
+.section--drive {
+  background: linear-gradient(180deg, #fdfcfa 0%, #f5f0eb 100%);
+}
+
+.drive-qr {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1.35rem;
+}
+
+.drive-qr__link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  border: 3px solid #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drive-qr__link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 40px rgba(40, 28, 20, 0.12);
+}
+
+.drive-qr__link:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 4px;
+}
+
+.drive-qr__img {
+  display: block;
+  width: min(220px, 72vw);
+  height: auto;
+}
+
+.section__actions--tight {
+  margin-top: 0;
+}
+
+.drive-query {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 1.25rem 0 0;
+  line-height: 1.6;
+}
+
+.drive-query__label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.drive-query__code {
+  display: inline-block;
+  padding: 0.35rem 0.65rem;
+  background: #fff;
+  border: 1px solid #e8e0d8;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  word-break: break-all;
+  color: var(--color-text);
+}
+
+/* --- Contact block --- */
 .contact-phones {
   text-align: center;
   color: var(--color-muted);
@@ -1065,76 +1116,6 @@ body:not(.is-envelope-active) main {
   margin: 0 0 0.5rem;
 }
 
-.rsvp-form {
-  position: relative;
-  background: #fff;
-  padding: 1.75rem 1.5rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.rsvp-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-muted);
-}
-
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form textarea {
-  font: inherit;
-  font-size: 1rem;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: normal;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0.65rem 0.75rem;
-  color: var(--color-text);
-  background: #fdfdfc;
-  transition: border-color 0.2s;
-}
-
-.rsvp-form input:focus,
-.rsvp-form select:focus,
-.rsvp-form textarea:focus {
-  border-color: var(--color-copper);
-  outline: 2px solid rgba(185, 160, 143, 0.35);
-  outline-offset: 0;
-}
-
-.rsvp-form__status {
-  min-height: 1.5em;
-  font-size: 0.95rem;
-  text-align: center;
-  margin: 0.5rem 0 0;
-}
-
-.rsvp-form__status--ok {
-  color: #1e7a4a;
-}
-
-.rsvp-form__status--err {
-  color: #a52a2a;
-}
-
-.rsvp-form__note {
-  background: #fff6e5;
-  padding: 0.75rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* --- Contact block --- */
 .section--contact-block {
   text-align: center;
   background: #fff;
@@ -1150,7 +1131,7 @@ body:not(.is-envelope-active) main {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* Wyższy blok = większe „contain” na pionowym kadrze; karty na dole zostawiają środek na twarze */
+  /* Taller block = more vertical photo “contain”; cards sit low so faces stay centered */
   min-height: clamp(72vh, 88vh, 58rem);
   min-height: clamp(72dvh, 88dvh, 58rem);
   overflow: hidden;
@@ -1158,7 +1139,7 @@ body:not(.is-envelope-active) main {
   padding: 0 0 3rem;
 }
 
-/* cover + większy box jak w hero: parallax nie odkrywa #4a5560 na górze/dole */
+/* Same treatment as hero: taller media box so parallax does not reveal flat bg at edges */
 .location-hero__media {
   position: absolute;
   left: 0;
@@ -1195,7 +1176,7 @@ body:not(.is-envelope-active) main {
   z-index: 2;
   flex-shrink: 0;
   text-align: center;
-  /* Górna „trzecia” kadru jak na zaproszeniu: duży skrypt + data pod spodem */
+  /* Upper third of frame: large script + date like on the invitation */
   padding: clamp(4.5rem, 16vh, 9.5rem) 1.25rem clamp(1rem, 3vh, 2rem);
   color: #fff;
   max-width: 36rem;
@@ -1308,11 +1289,6 @@ body:not(.is-envelope-active) main {
   color: var(--color-muted);
   background: #fff;
   border-top: 1px solid #eee;
-}
-
-.link-inline {
-  font-weight: 600;
-  font-size: 1.1rem;
 }
 
 /* Nav toggle when open - optional animation */
