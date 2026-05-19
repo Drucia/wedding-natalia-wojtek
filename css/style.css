@@ -533,7 +533,7 @@ body:not(.is-envelope-active) main {
   top: -14%;
   height: 128%;
   background-color: #5a524c;
-  background-position: center;
+  background-position: center 40%;
   background-size: cover;
   background-repeat: no-repeat;
   /* background-image set inline in HTML (document-relative), not via var() here */
@@ -624,8 +624,12 @@ body:not(.is-envelope-active) main {
 }
 
 /* Anchor from top: cover + center was cropping heads */
+.scene__panel--a {
+  background-position: center 30%;
+}
+
 .scene__panel--b {
-  background-position: center top;
+  background-position: center 10%;
 }
 
 .scene__panel::after {
@@ -665,7 +669,7 @@ body:not(.is-envelope-active) main {
 }
 
 .scene__note--b {
-  top: 10%;
+  bottom: 10%;
   right: 6%;
   transform: translateY(-12px) rotate(2deg);
 }
@@ -1199,11 +1203,11 @@ body:not(.is-envelope-active) main {
 
 .location-hero__date {
   font-family: var(--font-serif);
-  font-size: clamp(0.8rem, 2.4vw, 1.05rem);
+  font-size: clamp(1.8rem, 4vw, 2.1rem);
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  margin: 0;
+  margin: 2.5rem 0 0 0;
   padding-left: 0.32em;
   color: rgba(255, 255, 255, 0.98);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
