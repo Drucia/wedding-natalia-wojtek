@@ -67,13 +67,55 @@
         <div class="hero__content">
           <h1 class="hero__title">Natalka i Wojtek</h1>
           <p class="hero__date">20 CZERWCA 2026</p>
-          <a
+          <button
             class="hero__cta btn"
-            href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:%C5%9Alub%20Natalki%20i%20Wojtka%0ADTSTART:20260620T140000Z%0ADTEND:20260620T210000Z%0ADESCRIPTION:Do%C5%82%C4%85cz%20do%20naszego%20szczeg%C3%B3lnego%20dnia!%0ALOCATION:%0AUID:nw-wedding-2026-06-20%0ABEGIN:VALARM%0AACTION:DISPLAY%0ADESCRIPTION:Przypomnienie%20o%20%C5%9Blubie%20Natalki%20i%20Wojtka%0ATRIGGER:-P1D%0AEND:VALARM%0AEND:VEVENT%0AEND:VCALENDAR"
-            download="Natalka-i-Wojtek-2026.ics"
-            >
+            id="add-to-calendar-btn"
+            type="button"
+          >
             Zapisz datę
-          </a>
+          </button>
+          <script>
+            // Android Chrome can't download data URLs with download attr.
+            // Use Blob and trigger download
+            document.getElementById('add-to-calendar-btn').addEventListener('click', function () {
+              var icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'BEGIN:VEVENT',
+                'SUMMARY:Ślub Natalki i Wojtka',
+                'DTSTART:20260620T140000Z',
+                'DTEND:20260620T210000Z',
+                'DESCRIPTION:Dołącz do naszego szczególnego dnia!',
+                'LOCATION:',
+                'UID:nw-wedding-2026-06-20',
+                'BEGIN:VALARM',
+                'ACTION:DISPLAY',
+                'DESCRIPTION:Przypomnienie o ślubie Natalki i Wojtka',
+                'TRIGGER:-P1D',
+                'END:VALARM',
+                'END:VEVENT',
+                'END:VCALENDAR'
+              ].join('\r\n');
+
+              try {
+                var blob = new Blob([icsContent], { type: 'text/calendar' });
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'Natalka-i-Wojtek-2026.ics';
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(function () {
+                  document.body.removeChild(a);
+                  URL.revokeObjectURL(url);
+                }, 100);
+              } catch (e) {
+                alert('Nie udało się pobrać pliku kalendarza. Spróbuj ponownie lub na innym urządzeniu.');
+              }
+            });
+          </script>
+ 
    
         </div>
       </div>
