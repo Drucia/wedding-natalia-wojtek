@@ -865,7 +865,6 @@ body:not(.is-envelope-active) main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  vertical-align: middle;
   transform: scale(1.01);
   transition: transform 0.5s ease;
 }
@@ -892,6 +891,108 @@ body:not(.is-envelope-active) main {
 /* --- Love story section --- */
 .section--story {
   background: var(--color-bg-mute);
+}
+
+/* --- Organizacja (timeline + nocleg) --- */
+.section--org {
+  background: linear-gradient(180deg, #fdfcfa 0%, #f6efe8 100%);
+}
+
+.org-jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0 auto 2.5rem;
+  font-family: var(--font-serif);
+  color: var(--color-muted);
+}
+
+.org-jump__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(185, 160, 143, 0.35);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-copper-dark);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.org-jump__link:hover {
+  color: var(--color-copper-dark);
+  text-decoration: none;
+  border-color: rgba(185, 160, 143, 0.55);
+  background: #fff;
+}
+
+.org-jump__divider {
+  opacity: 0.5;
+}
+
+.org-subtitle {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3.2vw, 1.55rem);
+  letter-spacing: 0.02em;
+  margin: 2.75rem 0 1.25rem;
+  text-align: center;
+  color: var(--color-text);
+  scroll-margin-top: calc(var(--header-h) + 1.25rem);
+}
+
+.org-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem 1.35rem 1.35rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  border-top: 2px solid rgba(185, 160, 143, 0.35);
+}
+
+.org-card__lead {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  margin: 0 0 0.9rem;
+}
+
+.org-card__row {
+  font-family: var(--font-serif);
+  color: var(--color-muted);
+  margin: 0.35rem 0;
+}
+
+.org-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin: 1.25rem 0 0.6rem;
+  color: var(--color-text);
+}
+
+.org-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.15rem;
+  font-family: var(--font-serif);
+  color: var(--color-muted);
+}
+
+.org-list li {
+  margin: 0.45rem 0;
+  line-height: 1.6;
+}
+
+.timeline__block--note {
+  background: linear-gradient(180deg, #fff 0%, #fbf7f1 100%);
+  border-top-color: rgba(143, 122, 108, 0.4);
+}
+
+.timeline__block--note .timeline__subtitle {
+  color: var(--color-copper-dark);
 }
 
 /* Light sprig ornaments (PNG) with multiply — white drops out, thin lines remain */
