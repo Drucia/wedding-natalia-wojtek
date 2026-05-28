@@ -974,6 +974,32 @@ body:not(.is-envelope-active) main {
   color: var(--color-text);
 }
 
+.org-figure {
+  margin: 0.85rem 0 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(185, 160, 143, 0.28);
+  box-shadow: 0 10px 30px rgba(40, 28, 20, 0.06);
+}
+
+.org-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.org-figure__caption {
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  background: linear-gradient(180deg, #fff 0%, #fbf7f1 100%);
+  border-top: 1px solid rgba(185, 160, 143, 0.18);
+  text-align: center;
+}
+
 .org-list {
   margin: 0.35rem 0 0;
   padding-left: 1.15rem;
