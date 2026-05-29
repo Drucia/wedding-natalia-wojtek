@@ -97,7 +97,12 @@ a:hover {
 }
 
 .amp {
-  font-style: italic;
+  display: inline-block;
+  font-size: 0.62em;
+  font-style: normal;
+  line-height: 1;
+  margin-inline: 0.22em 0.28em;
+  vertical-align: 0.08em;
 }
 
 /* --- Envelope full screen --- */
@@ -179,9 +184,9 @@ a:hover {
 }
 
 .envelope__wax-amp {
-  font-size: 0.7rem;
+  font-size: 0.65em;
   vertical-align: super;
-  margin: 0 0.1rem;
+  margin-inline: 0.12em;
 }
 
 /* Rotation on a separate wrapper: clip-path + rotateX on one element breaks backface in Chrome/WebKit */

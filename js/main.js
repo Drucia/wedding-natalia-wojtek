@@ -5,7 +5,8 @@
   "use strict";
 
   const config = window.WEDDING_CONFIG || {
-    PHOTOS_DRIVE_URL: "https://drive.google.com",
+    PHOTOS_DRIVE_URL:
+      "https://drive.google.com/drive/folders/1ZTkmhqXaj9EIh5sSfyh6UvoJeyC1Z_O9?usp=sharing",
     PHOTOS_DRIVE_FOLDER_ID: "",
   };
 
