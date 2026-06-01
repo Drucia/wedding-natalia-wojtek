@@ -1005,6 +1005,12 @@ body:not(.is-envelope-active) main {
   text-align: center;
 }
 
+.org-figure--portrait {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .org-list {
   margin: 0.35rem 0 0;
   padding-left: 1.15rem;
@@ -1465,6 +1471,33 @@ body:not(.is-envelope-active) main {
   white-space: nowrap;
   font-weight: 600;
   color: rgba(45, 42, 40, 0.85);
+}
+
+.js-zoomable {
+  cursor: zoom-in;
+}
+
+/* MODAL */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.img-modal img {
+  max-width: 92%;
+  max-height: 92%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.img-modal.is-open {
+  display: flex;
+  cursor: zoom-out;
 }
 
 @media (max-width: 520px) {

@@ -253,6 +253,8 @@
         <nav class="org-jump" aria-label="Skróty w sekcji organizacyjnej">
           <a class="org-jump__link" href="#organizacja-sobota">Sobota</a>
           <span class="org-jump__divider" aria-hidden="true">|</span>
+          <a class="org-jump__link" href="#organizacja-plan-stolow">Plan stołów</a>
+          <span class="org-jump__divider" aria-hidden="true">|</span>
           <a class="org-jump__link" href="#organizacja-hotel">Nocleg</a>
           <span class="org-jump__divider" aria-hidden="true">|</span>
           <a class="org-jump__link" href="#organizacja-niedziela">Niedziela</a>
@@ -281,8 +283,14 @@
 
           <article class="timeline__block timeline__block--note js-reveal">
             <p class="timeline__date">od 17:00</p>
-            <h4 class="timeline__subtitle">Drinki i szwedzki stół</h4>
-            <p class="timeline__text">Od 17:00 będą serwowane drinki. Razem z ciastami będzie szwedzki stół zimny i ciepły (sałatki, wędliny, galaretki i inne przekąski).</p>
+            <h4 class="timeline__subtitle">Szwedzki stół</h4>
+            <p class="timeline__text">Od 17:00 razem z ciastami będzie szwedzki stół zimny i ciepły (sałatki, wędliny, galaretki i inne przekąski).</p>
+          </article>
+
+          <article class="timeline__block timeline__block--note js-reveal">
+            <p class="timeline__date">17:00–2:00</p>
+            <h4 class="timeline__subtitle">Drink bar</h4>
+            <p class="timeline__text">Drink bar czynny od 17:00 do 2:00. Będą dostępne również drinki bezalkoholowe.</p>
           </article>
 
           <article class="timeline__block js-reveal">
@@ -321,6 +329,22 @@
             <p class="timeline__text">Tańce do rana.</p>
           </article>
         </div>
+
+        <h3 class="org-subtitle" id="organizacja-plan-stolow">Plan stołów</h3>
+        <figure class="org-figure org-figure--portrait js-reveal js-zoomable">
+          <img
+            class="org-figure__img"
+            src="images/plan_pion.png"
+            width="800"
+            height="1200"
+            alt="Plan stołów weselnych — rozmieszczenie gości przy stołach A–H i stołem M"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="org-figure__caption">
+            Sprawdźcie, przy którym stole Was posadziliśmy.
+          </figcaption>
+        </figure>
 
         <h3 class="org-subtitle" id="organizacja-hotel">Nocleg — Hotel Jasek</h3>
         <div class="org-card js-reveal">
@@ -366,7 +390,7 @@
           </article>
 
           <article class="timeline__block js-reveal">
-            <p class="timeline__date">11:00</p>
+            <p class="timeline__date">12:00</p>
             <h4 class="timeline__subtitle">Wymeldowanie</h4>
             <p class="timeline__text">Opuszczanie pokoi hotelowych. Jeden pokój będzie dostępny, aby móc zostawić bagaż (dla chętnych).</p>
           </article>
@@ -479,6 +503,7 @@
 
   <script src="config.js"></script>
   <script src="js/envelope.js" defer></script>
+  <script src="js/zoom.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
