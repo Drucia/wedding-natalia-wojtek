@@ -492,7 +492,7 @@ body:not(.is-envelope-active) main {
   text-align: center;
   color: var(--color-muted);
   max-width: 26rem;
-  margin: 2rem auto 0;
+  margin: 0 auto 0;
   line-height: 1.65;
   opacity: 0.92;
 }
