@@ -489,10 +489,51 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <div class="site-footer__icons" style="display: flex; justify-content: center; align-items: center; gap: 2em;">
-        <img src="images/home.png" alt="koperta zamiast prezentów" width="240" height="140" loading="lazy" style="vertical-align: middle; object-fit: contain;" />
-        <img src="images/wine.png" alt="wino zamiast kwiatów" width="130" height="78" loading="lazy" style="vertical-align: middle; object-fit: contain;" />
+      <div class="site-footer__icons" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        flex-wrap: wrap;
+      ">
+        <img
+          src="images/home.png"
+          alt="koperta zamiast prezentów"
+          class="footer-icon footer-icon--home"
+          loading="lazy"
+        />
+        <img
+          src="images/wine.png"
+          alt="wino zamiast kwiatów"
+          class="footer-icon footer-icon--wine"
+          loading="lazy"
+        />
       </div>
+      <style>
+        .footer-icon {
+          vertical-align: middle;
+          object-fit: contain;
+          max-width: 160px;
+          height: auto;
+        }
+        .footer-icon--wine {
+          max-width: 95px;
+        }
+        @media (max-width: 600px) {
+          .site-footer__icons {
+            flex-direction: column !important;
+            gap: 1em !important;
+            align-items: center;
+          }
+          .footer-icon {
+            max-width: 44vw;
+          }
+          .footer-icon--wine {
+            max-width: 28vw;
+            min-width: 58px;
+          }
+        }
+      </style>
       <p class="section__whisper">
         Gdybyście chcieli nas uhonorować drobnym gestem, najbardziej ucieszy nas skromna koperta — cicho zbieramy na budowę naszego pierwszego wspólnego domu.<br>
         <span style="font-size:0.97em;">Zamiast kwiatów, mile widziane będzie wino.</span>
